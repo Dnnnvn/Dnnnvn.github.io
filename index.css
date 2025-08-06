@@ -45,6 +45,11 @@ body {
   z-index: 10;
 }
 
+body, html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: var(--font-main);
   background-color: #000000;;
@@ -339,6 +344,10 @@ body.purple-theme .theme-toggle:hover {
   box-shadow: 0 0 15px var(--color-accento);
 }
 
+.theme-toggle-container {
+  padding-bottom: 60px;
+}
+
 body.purple-theme .theme1-icon {
   display: none;
 }
@@ -348,4 +357,73 @@ body.purple-theme .theme2-icon {
   filter: 
     drop-shadow(0 0 5px rgba(255, 0, 0, 0.295))
     hue-rotate(0deg);
+
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    gap: 10px;
+  }
+
+  .navbar li a {
+    padding: 12px;
+    font-size: 1em;
+  }
+
+  .nav-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .cosmic-title {
+    font-size: 2rem;
+    margin-top: 30px;
+  }
+
+  .theme-toggle {
+    margin-top: 20px;
+  }
+
+  .icon-them {
+    width: 90px;
+    height: 70px;
+  }
+
+  .footer-content {
+    padding: 10px;
+    font-size: 0.9em;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .crown-icon {
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+  }
+
+  .theme-toggle-container {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+
+  .icon-them {
+    width: 80px;
+    height: 60px;
+  }
+
+  .nav-icon {
+    width: 35px;
+    height: 35px;
+  }
 }
