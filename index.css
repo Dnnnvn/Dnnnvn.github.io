@@ -151,16 +151,17 @@ body {
 .navbar ul {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 1.5rem;
   padding: 0;
 }
 
 .navbar li {
   background: var(--negro-transparente);
   backdrop-filter: blur(10px);
-  border-radius: 8px;
+  border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.459);
   transition: all 0.3s ease;
+  padding: 1.2rem 1.5rem;
 }
 
 .navbar li.active {
@@ -177,9 +178,9 @@ body {
 }
 
 .nav-icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 6px;
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
 }
 
 .cosmic-footer {
@@ -353,7 +354,25 @@ body.purple-theme .theme2-icon {
     hue-rotate(0deg);
 }
 
-@media (max-width: 780px) and (hover: none) and (pointer: coarse) {
+@media (min-width: 1024px) {
+  .navbar li {
+    padding: 1.5rem 2rem; 
+    border-radius: 16px;
+  }
+  
+  .navbar li a {
+    font-size: 1.5rem; 
+    gap: 2rem;
+  }
+  
+  .nav-icon {
+    width: 70px;
+    height: 70px;
+  border-radius: 10px;
+  }
+}
+
+@media (max-width: 768px) and (hover: none) and (pointer: coarse) {
   body {
     font-size: 15px;
     line-height: 1.4;
@@ -363,15 +382,20 @@ body.purple-theme .theme2-icon {
     gap: 10px;
   }
 
+.navbar li {
+    padding: 1rem 1.2rem; 
+    border-radius: 8px;
+  }
+  
   .navbar li a {
     padding: 10px 14px;
-    font-size: 0.95em;
-    gap: 12px;
+    font-size: 1.1rem;
+    gap: 1rem;
   }
 
   .nav-icon {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
 
   .cosmic-title {
@@ -408,6 +432,7 @@ body.purple-theme .theme2-icon {
     height: 35px;
   }
 }
+
 
 
 
