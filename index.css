@@ -181,7 +181,13 @@ body {
 
 /* TEMA MORADO */
 body.purple-theme {
-  background-color: var(--morado-oscuro);
+  --color-primario: #b84e4e;  
+  --color-accento: #ff3333;    
+  --color-secundario: #800000; 
+  --negro-transparente: rgba(70, 0, 0, 0.3); 
+  
+  --border-color: rgba(255, 51, 51, 0.6);
+  --text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
 }
 
 body.purple-theme .navbar li {
@@ -194,6 +200,8 @@ body.purple-theme .theme1-icon {
 
 body.purple-theme .theme2-icon {
   display: inline;
+  drop-shadow(0 0 5px rgb(255, 0, 0))
+  hue-rotate(0deg);
 }
 
 /* RESPONSIVE - TABLETS */
@@ -250,5 +258,6 @@ body.purple-theme .theme2-icon {
     margin-bottom: 30px;
   }
 }
+
 
 
