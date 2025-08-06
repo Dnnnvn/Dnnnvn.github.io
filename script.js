@@ -56,4 +56,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     localStorage.setItem("themeIconIndex", currentIconIndex);
   });
+
+  const bgVideo = document.getElementById('bgVideo');
+  const placeholderBg = document.getElementById('placeholderBg');
+  const htmlTag = document.documentElement;
+
+  bgVideo.addEventListener('loadeddata', () => {
+    if (!htmlTag.classList.contains('purple-theme')) {
+      placeholderBg.style.opacity = '0';
+      setTimeout(() => {
+        placeholderBg.style.display = 'none';
+      }, 1000); 
+    }
+  });
+  
 });
