@@ -186,8 +186,8 @@ body {
 
 .cosmic-footer {
   width: 100%;
-  margin-top: 2rem;
-  padding: 30px 0;
+  margin-top: 4rem;
+  padding: 2rem 0;
   position: relative;
   color: #cccccc;
 }
@@ -357,7 +357,8 @@ body.purple-theme .theme2-icon {
 
 @media (min-width: 1024px) {
   .navbar li {
-    padding: 0.5rem 1.5rem;; 
+    padding: 0.2rem 1rem;
+    margin-bottom: 0.2rem
     border-radius: 16px;
     margin-bottom: 0.4rem;
   }
@@ -434,6 +435,7 @@ body.purple-theme .theme2-icon {
     height: 35px;
   }
 }
+
 
 
 
