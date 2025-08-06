@@ -1,17 +1,31 @@
 /* VARIABLES */
 :root {
-  --morado-intenso: #463f96;
-  --morado-oscuro: #34357a;
-  --morado-neon: #7c83bf;
-  --morado-transparente: rgba(77, 76, 147, 0.25);
 
-  --rojo-intenso: #a21818;
-  --rojo-oscuro: #2a0101;
-  --rojo-neon: #ff4c4c;
-  --rojo-transparente: rgba(162, 24, 24, 0.25);
+  --color-primario: #2d2e2e;
+  --color-secundario: #0a0e17;
+
+  --color-transparente: rgba(0, 168, 204, 0.15);
+  
+  --font-main: 'Exo 2', sans-serif;
+  --font-accent: 'Orbitron', sans-serif;
+
+    --color-primario: #eceaeac7; 
+  --color-accento: #cccccc; 
+  --negro-absoluto: #000000;
+  --negro-transparente: rgba(0, 0, 0, 0.151);
+  --font-main: "Anton", sans-serif;
+  --font-accent: "Kanit", sans-serif;
+  --font-fun: "Kanit", sans-serif;
 }
 
-/* BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
 body {
   margin: 0;
   font-family: 'Kanit', sans-serif;
@@ -20,7 +34,7 @@ body {
   overflow-x: hidden;
 }
 
-/* VIDEO DE FONDO */
+
 .video-background {
   position: fixed;
   top: 0;
@@ -84,7 +98,6 @@ body {
   letter-spacing: 3px;
 }
 
-/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: center;
@@ -101,10 +114,11 @@ body {
 }
 
 .navbar li {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--negro-transparente);
+  backdrop-filter: blur(10px);
   border-radius: 8px;
-  transition: transform 0.3s, background-color 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.459);
+  transition: all 0.3s ease;
 }
 
 .navbar li:hover {
@@ -127,7 +141,6 @@ body {
   height: 24px;
 }
 
-/* THEME ICONOS (Cambia con el tema) */
 .theme1-icon {
   display: inline;
 }
@@ -136,7 +149,6 @@ body {
   display: none;
 }
 
-/* TOGGLE DE TEMA */
 .theme-toggle-container {
   margin: 30px auto;
   display: flex;
@@ -169,7 +181,6 @@ body {
   object-fit: contain;
 }
 
-/* FOOTER */
 .cosmic-footer {
   margin-top: 80px;
   text-align: center;
@@ -179,7 +190,6 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* TEMA MORADO */
 body.purple-theme {
   --color-primario: #b84e4e;  
   --color-accento: #ff3333;    
@@ -204,7 +214,6 @@ body.purple-theme .theme2-icon {
   hue-rotate(0deg);
 }
 
-/* RESPONSIVE - TABLETS */
 @media (max-width: 768px) {
   body {
     font-size: 14px;
@@ -237,8 +246,7 @@ body.purple-theme .theme2-icon {
   }
 }
 
-/* RESPONSIVE - CELULARES */
-@media (max-width: 480px) {
+@media (max-width: 490px) {
   .navbar ul {
     gap: 8px;
   }
@@ -258,6 +266,7 @@ body.purple-theme .theme2-icon {
     margin-bottom: 30px;
   }
 }
+
 
 
 
