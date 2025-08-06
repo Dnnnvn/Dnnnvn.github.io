@@ -22,19 +22,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     themeIcon.src = iconImages[iconIndex];
-
     localStorage.setItem('theme', theme);
     localStorage.setItem('themeIconIndex', iconIndex);
   }
 
+
   applyTheme(currentTheme, currentIconIndex);
 
   toggleBtn.addEventListener('click', function () {
-
     currentTheme = body.classList.contains('purple-theme') ? 'default' : 'purple';
     currentIconIndex = (currentIconIndex + 1) % iconImages.length;
-
     applyTheme(currentTheme, currentIconIndex);
   });
 });
+
 
