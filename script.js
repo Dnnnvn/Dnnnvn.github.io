@@ -1,73 +1,40 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const toggleBtn = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
   const body = document.body;
+  const bgVideo = document.getElementById('bgVideo');
+  const bgAltVideo = document.getElementById('bgAltVideo');
 
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'purple') {
-    body.classList.add('purple-theme');
-  }
+  const iconImages = ["img/tema.png", "img/tema2.png"];
 
-  toggleBtn.addEventListener('click', function() {
-    body.classList.toggle('purple-theme');
-    
-    const theme = body.classList.contains('purple-theme') ? 'purple' : 'default';
-    localStorage.setItem('theme', theme);
-    
-    const bgVideo = document.getElementById('bgVideo');
-    const bgAltVideo = document.getElementById('bgAltVideo');
-    
+  let currentTheme = localStorage.getItem('theme') || 'default';
+  let currentIconIndex = parseInt(localStorage.getItem("themeIconIndex")) || 0;
+
+  function applyTheme(theme, iconIndex) {
     if (theme === 'purple') {
+      body.classList.add('purple-theme');
       bgVideo.style.display = 'none';
       bgAltVideo.style.display = 'block';
     } else {
+      body.classList.remove('purple-theme');
       bgVideo.style.display = 'block';
       bgAltVideo.style.display = 'none';
     }
-  });
 
-  const bgVideo = document.getElementById('bgVideo');
-  const bgAltVideo = document.getElementById('bgAltVideo');
-  
-  if (body.classList.contains('purple-theme')) {
-    bgVideo.style.display = 'none';
-    bgAltVideo.style.display = 'block';
-  } else {
-    bgVideo.style.display = 'block';
-    bgAltVideo.style.display = 'none';
+    themeIcon.src = iconImages[iconIndex];
+
+    localStorage.setItem('theme', theme);
+    localStorage.setItem('themeIconIndex', iconIndex);
   }
 
- const iconImages = [
-    "img/tema.png",
-    "img/tema2.png"
+  applyTheme(currentTheme, currentIconIndex);
 
-  ];
+  toggleBtn.addEventListener('click', function () {
 
-  const themeIcon = document.getElementById("themeIcon");
-  const themeToggleBtn = document.getElementById("themeToggle");
-
-  let currentIconIndex = parseInt(localStorage.getItem("themeIconIndex")) || 0;
-
-  themeIcon.src = iconImages[currentIconIndex];
-
-  themeToggleBtn.addEventListener("click", () => {
+    currentTheme = body.classList.contains('purple-theme') ? 'default' : 'purple';
     currentIconIndex = (currentIconIndex + 1) % iconImages.length;
 
-    themeIcon.src = iconImages[currentIconIndex];
-
-    localStorage.setItem("themeIconIndex", currentIconIndex);
+    applyTheme(currentTheme, currentIconIndex);
   });
-
-  const bgVideo = document.getElementById('bgVideo');
-  const placeholderBg = document.getElementById('placeholderBg');
-  const htmlTag = document.documentElement;
-
-  bgVideo.addEventListener('loadeddata', () => {
-    if (!htmlTag.classList.contains('purple-theme')) {
-      placeholderBg.style.opacity = '0';
-      setTimeout(() => {
-        placeholderBg.style.display = 'none';
-      }, 1000); 
-    }
-  });
-  
 });
+
