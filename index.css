@@ -144,25 +144,23 @@ body {
 }
 
 .navbar {
-  width: 95%
+  width: 100%;
+  max-width: 600px;
   margin: 0 auto !important;
   padding: 0.2rem !important;
-  max-height: 35vh !important;
+  max-height: 50vh;
   width: 95%; 
-  max-width: 400px;
+  max-width: 500px;
   display: flex;
   justify-content: center;
-  max-height: 65vh;
-  overflow-y: auto;
 }
 
 .navbar ul {
   display: flex;
   flex-direction: column;
-   width: 100% !important;
-  margin: 0 auto !important;
   gap: 0.1rem !important;
   padding: 0.1rem !important;
+  margin: 0 auto !important;
 }
 
 .navbar li {
@@ -177,14 +175,6 @@ body {
   margin: 0;
 }
 
-.navbar li:hover {
-  transform: scale(1.02);
-}
-
-.navbar li:hover .nav-icon {
-  transform: scale(1.1);
-}
-
 .navbar li.active {
   border-left: 3px solid var(--color-accento);
 }
@@ -192,18 +182,18 @@ body {
 .navbar li a {
   display: flex;
   align-items: center;
-  justify-content: flex-start; 
-  font-size: 0.85rem !important;
   gap: 0.5rem !important;
-  padding: 0.1rem 0.3rem !important;
+  padding: 0 0.3rem !important;
   color: var(--color-primario);
+  text-decoration: none;
+  justify-content: center;
+  font-size: 0.8rem !important;
 }
 
 .nav-icon {
-  width: 22px !important; 
-  height: 22px !important;
-  margin-right: 0.3rem !important;
-  transition: all 0.2s ease;
+  width: 40px;
+  height: 40px;
+  margin-right: 0.3rem !important
 }
 
 .cosmic-footer {
@@ -378,8 +368,7 @@ body.purple-theme .theme2-icon {
 
 @media (min-width: 1024px) {
   .navbar li {
-    padding: 0.15rem 0.6rem !important;
-    min-height: 30px !important;
+    padding: 0.2rem 1rem;
     margin-bottom: 0.2rem
     border-radius: 16px;
     margin-bottom: 0.4rem;
@@ -415,8 +404,7 @@ body.purple-theme .theme2-icon {
   }
 
   .navbar {
-   width: 98% !important;
-    max-height: 60vh;
+    width: 98% !important;
   }
 
   .navbar li {
@@ -430,12 +418,11 @@ body.purple-theme .theme2-icon {
     padding: 10px 14px;
     font-size: 1.1rem;
     gap: 1rem;
-    min-height: 30px !important;
   }
 
   .nav-icon {
-    width: 20px !important;
-    height: 20px !important;
+    width: 40px;
+    height: 40px;
   }
 
   .cosmic-title {
@@ -472,6 +459,7 @@ body.purple-theme .theme2-icon {
     height: 35px;
   }
 }
+
 
 
 
