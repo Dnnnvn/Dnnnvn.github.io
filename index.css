@@ -156,11 +156,13 @@ body {
 }
 
 .navbar ul {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 0.1rem !important;
   padding: 0.1rem !important;
-  margin: 0 auto !important;
 }
 
 .navbar li {
@@ -169,11 +171,13 @@ body {
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.459);
   transition: all 0.3s ease;
-  padding: 0.5rem 1.2rem; 
-  margin: 0 auto 0.3rem;   
-  min-height: 40px;
-  max-width: 90%;          
+  padding: 0.7rem 2rem;
+  margin: 0 auto 0.5rem;
+  min-height: 36px;
+  width: 90%; 
+  max-width: 500px; 
 }
+
 
 .navbar li.active {
   border-left: 3px solid var(--color-accento);
@@ -459,6 +463,7 @@ body.purple-theme .theme2-icon {
     height: 35px;
   }
 }
+
 
 
 
