@@ -12,7 +12,7 @@
   
   --font-main: 'Exo 2', sans-serif;
   --font-accent: 'Orbitron', sans-serif;
-
+  --footer-gradient: rgba(255, 255, 255, 0.685);
     --color-primario: #eceaeac7; 
   --color-accento: #cccccc; 
   --negro-absoluto: #000000;
@@ -217,7 +217,7 @@ body {
   transform: translateX(-50%);
   width: 80%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.685), transparent);
+  background: linear-gradient(90deg, transparent, var(--footer-gradient), transparent);
 }
 
 html, body {
@@ -265,6 +265,7 @@ footer {
 
 body.purple-theme {
   --color-accento: var(--morado-neon);
+  --footer-gradient: rgba(255, 0, 0, 0.6);
 }
 
 body.purple-theme .navbar li.active {
@@ -465,6 +466,7 @@ body.purple-theme .theme2-icon {
     height: 35px;
   }
 }
+
 
 
 
