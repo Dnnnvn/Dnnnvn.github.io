@@ -182,16 +182,18 @@ body {
 .navbar li a {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
-  padding: 15px 20px;
+  gap: 0.5rem !important;
+  padding: 0 0.3rem !important;
   color: var(--color-primario);
   text-decoration: none;
+  justify-content: center;
+  font-size: 0.8rem !important;
 }
 
 .nav-icon {
   width: 60px;
   height: 60px;
-  border-radius: 8px;
+  margin-right: 0.3rem !important
 }
 
 .cosmic-footer {
@@ -401,10 +403,15 @@ body.purple-theme .theme2-icon {
     gap: 10px;
   }
 
-.navbar li {
+  .navbar {
+    width: 98% !important;
+  }
+
+  .navbar li {
     padding: 1rem 1.2rem; 
     border-radius: 8px;
     min-height: 24px !important;
+    max-width: 95% !important;
   }
   
   .navbar li a {
@@ -452,6 +459,7 @@ body.purple-theme .theme2-icon {
     height: 35px;
   }
 }
+
 
 
 
