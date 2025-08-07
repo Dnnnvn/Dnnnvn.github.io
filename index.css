@@ -252,8 +252,8 @@ footer {
 }
 
 .icon-them {
-  width: 115px;
-  height: 85px;
+  width: 85px;
+  height: 65px;
   border-radius: 6px;
 }
 
@@ -459,6 +459,7 @@ body.purple-theme .theme2-icon {
     height: 35px;
   }
 }
+
 
 
 
