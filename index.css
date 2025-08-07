@@ -147,7 +147,7 @@ body {
   width: 95%
   margin: 0 auto !important;
   padding: 0.2rem !important;
-  max-height: 50vh;
+  max-height: 35vh !important;
   width: 95%; 
   max-width: 400px;
   display: flex;
@@ -472,6 +472,7 @@ body.purple-theme .theme2-icon {
     height: 35px;
   }
 }
+
 
 
 
