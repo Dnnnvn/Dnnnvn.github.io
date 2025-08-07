@@ -186,12 +186,13 @@ body {
 .navbar li a {
   display: flex;
   align-items: center;
-  gap: 0.5rem !important;
+  gap: 1rem;
   padding: 0 0.3rem !important;
   color: var(--color-primario);
   text-decoration: none;
   justify-content: center;
   font-size: 0.8rem !important;
+  justify-content: flex-start;
 }
 
 .nav-icon {
@@ -256,9 +257,10 @@ footer {
 }
 
 .icon-them {
-  width: 85px;
-  height: 65px;
+  width: 65px;
+  height: 45px;
   border-radius: 6px;
+  object-fit: contain;
 }
 
 body.purple-theme {
@@ -463,6 +465,7 @@ body.purple-theme .theme2-icon {
     height: 35px;
   }
 }
+
 
 
 
