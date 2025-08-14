@@ -237,6 +237,7 @@ footer {
 .footer-content {
   text-align: center;
   padding: 15px;
+  font-size: 0.9rem !important;
 }
 
 .theme-toggle {
@@ -466,6 +467,7 @@ body.purple-theme .theme2-icon {
     height: 35px;
   }
 }
+
 
 
 
