@@ -377,7 +377,7 @@ body.purple-theme .theme2-icon {
 @media (min-width: 1024px) {
   .navbar li {
     padding: 0.2rem 1rem;
-    margin-bottom: 0.2rem
+    margin-bottom: 0.2rem;
     border-radius: 16px;
     margin-bottom: 0.4rem;
     max-width: 350px;
@@ -467,6 +467,7 @@ body.purple-theme .theme2-icon {
     height: 35px;
   }
 }
+
 
 
 
