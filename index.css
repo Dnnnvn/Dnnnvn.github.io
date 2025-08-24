@@ -98,7 +98,6 @@ body {
 .crown-wrapper {
   position: relative;
   text-align: center;
-  /* movimiento constante para corona + título */
   animation: float-title 6s ease-in-out infinite;
 }
 
@@ -495,10 +494,6 @@ body.purple-theme .theme2-icon {
     height: 35px;
   }
 }
-
-
-
-
 
 
 
