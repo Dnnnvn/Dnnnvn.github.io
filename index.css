@@ -1,5 +1,4 @@
 :root {
-
   --morado-intenso: #27235c;
   --morado-oscuro: #19193a;
   --morado-neon: #4b507c;
@@ -13,7 +12,8 @@
   --font-main: 'Exo 2', sans-serif;
   --font-accent: 'Orbitron', sans-serif;
   --footer-gradient: rgba(255, 255, 255, 0.685);
-    --color-primario: #eceaeac7; 
+
+  --color-primario: #eceaeac7; 
   --color-accento: #cccccc; 
   --negro-absoluto: #000000;
   --negro-transparente: rgba(0, 0, 0, 0.151);
@@ -47,7 +47,7 @@ body {
 
 body {
   font-family: var(--font-main);
-  background-color: #000000;;
+  background-color: #000000;
   margin: 0;
   overflow-x: hidden;
   min-height: 100vh;
@@ -98,6 +98,17 @@ body {
 .crown-wrapper {
   position: relative;
   text-align: center;
+  /* movimiento constante para corona + título */
+  animation: float-title 6s ease-in-out infinite;
+}
+
+@keyframes float-title {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 .crown-icon {
@@ -109,12 +120,11 @@ body {
   height: 40px;
   filter: drop-shadow(0 0 15px  rgb(255, 217, 0));
   transition: all 0.3s ease;
-  animation: float 3s ease-in-out infinite;
 }
 
 .crown-icon:hover {
   transform: translateX(-50%) scale(1.5) rotate(10deg);
-  filter: drop-shadow(0 0 15px  gold);
+  filter: drop-shadow(0 0 15px gold);
 }
 
 .cosmic-title {
@@ -176,8 +186,19 @@ body {
   min-height: 36px;
   width: 90%; 
   max-width: 500px; 
+  animation: float-btn 4s ease-in-out infinite;
 }
 
+.navbar li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+body.purple-theme .navbar li:hover {
+  box-shadow: 0 0 18px rgba(255, 0, 0, 0.8);
+  border: 1px solid rgba(255, 0, 0, 1);
+}
 
 .navbar li.active {
   border-left: 3px solid var(--color-accento);
@@ -190,7 +211,6 @@ body {
   padding: 0 0.3rem !important;
   color: var(--color-primario);
   text-decoration: none;
-  justify-content: center;
   font-size: 0.8rem !important;
   justify-content: flex-start;
 }
@@ -198,7 +218,7 @@ body {
 .nav-icon {
   width: 40px;
   height: 40px;
-  margin-right: 0.3rem !important
+  margin-right: 0.3rem !important;
 }
 
 .cosmic-footer {
@@ -238,6 +258,7 @@ footer {
   text-align: center;
   padding: 15px;
   font-size: 0.9rem !important;
+  animation: float-btn 5s ease-in-out infinite;
 }
 
 .theme-toggle {
@@ -250,6 +271,16 @@ footer {
   justify-content: center;
   transition: all 0.3s;
   margin: 2rem auto 0;
+  animation: float-btn 3s ease-in-out infinite;
+}
+
+@keyframes float-btn {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
 }
 
 .theme-toggle:hover {
@@ -331,7 +362,6 @@ body.purple-theme {
   --color-accento: #ff3333;    
   --color-secundario: #800000; 
   --negro-transparente: rgba(70, 0, 0, 0.3); 
-  
   --border-color: rgba(255, 51, 51, 0.6);
   --text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
 }
@@ -377,7 +407,6 @@ body.purple-theme .theme2-icon {
 @media (min-width: 1024px) {
   .navbar li {
     padding: 0.2rem 1rem;
-    margin-bottom: 0.2rem;
     border-radius: 16px;
     margin-bottom: 0.4rem;
     max-width: 350px;
@@ -393,11 +422,10 @@ body.purple-theme .theme2-icon {
     gap: 1.5rem;
   }
 
-  
   .nav-icon {
     width: 40px;
     height: 40px;
-  border-radius: 10px;
+    border-radius: 10px;
   }
 }
 
